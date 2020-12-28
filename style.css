@@ -75,9 +75,11 @@
 	}	
 	/* resume page */
 	#body_resume {
+		position: absolute;
 		margin-left: 1%;
 		margin-top: 1%;
 		font-size: 1.5em;
+		z-index:2;
 	}
 	
 	.headder {
@@ -85,20 +87,44 @@
 		margin-top: 1%;
 		margin-bottom: 1%;
 	}
-	
+	#resume_doc {
+		margin-top:2%;
+		border: 8px ridge grey;
+		width: 50%;
+		background:rgb(189, 189, 189);
+		padding-left:2%;
+		padding-bottom:2%;
+		padding-top:1%;
+	}
+	#languages {
+		margin-top:2%;
+		border: 8px ridge grey;
+		width: 50%;
+		background:rgb(189, 189, 189);
+		padding-left:2%;
+		padding-bottom:2%;
+	}
+	#technologies {
+		margin-top:2%;
+		border: 8px ridge grey;
+		width: 50%;
+		background:rgb(189, 189, 189);
+		padding-left:2%;
+		padding-bottom:2%;
+	}
 	table, th, td {
 		border: 1px solid black;
 		border-collapse: collapse;
 		font-size: 1.0em;
 		padding: 1%;
-		width:35%;
+		width:45%;
 	}
 	#table1, th, td {
 		border: 1px solid black;
 		border-collapse: collapse;
 		font-size: 1.0em;
 		padding: 1%;
-		width:30%;
+		width:45%;
 	}
 	#table2, th, td {
 		border: 1px solid black;
