@@ -9,7 +9,7 @@
 	font-family: monospace;
 	padding-bottom: 0px;
 	margin: auto;
-	border-bottom: 1px solid black
+	border-bottom: 1px solid black;
 		}
 	
 	h2 {
@@ -18,8 +18,10 @@
 		font-size: 2.75em;
 		margin: auto;
 		border-bottom: 1px solid black;
+		text-decoration:none;
 		
 		}
+	/* Main page and headder */
 	#background{
 		position: absolute;
 		height: 100%;
@@ -38,8 +40,10 @@
 		z-index: 1;
 	   }
 	#about {
-		font-size: 2em;
-		margin-bottom: 10px;
+		font-size: 2.25em;
+		margin-bottom: 4%;
+		margin-left: 5%;
+		margin-right: 5%;
 		text-algin: center;
 		padding-left: auto;
 		padding-right: auto;
@@ -51,17 +55,27 @@
 		margin-left: auto;
 		margin-right: auto;
 		border: 10px ridge rgb(92, 72, 18);
+		
 	}
-	
 	#description {
-		line-height: 1.2;
-		width: 75%;
-		font-size:1.25em;
+		width: 96%;
+		margin-top:4%;
+		margin-bottom:4%;
+		margin-left:2%;
+		margin-right:2%;
+		line-height: 1.25;
+		font-size:1em;
 		text-align: left;
-		font-weight: 10;
-		text-align: right;
-		padding-left: 5%;
+		font-weight: 12;
+		text-algin: right;	
+	}	
+	/* resume page */
+	#lang_table{
+		border: 2px solid black;
+		
 	}
+	#headder {
+		font-size: 2em;
 	
-	
+	}
 </style>
