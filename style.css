@@ -86,6 +86,7 @@
 		padding-bottom:2%;
 		padding-top: 1%;
 		margin-bottom:3%;
+		min-width: 560px;
 		
 	}
 	/* resume page */
@@ -112,7 +113,12 @@
 		width:95%;
 	}
 	/* Projects Page */
-	
+	#research_video {
+		margin-top:4%;
+	}
+	#projects {
+		font-size: 1.25em;
+	}
 	/* contact page */
 	#contact {
 		font-size: 1.5em;
