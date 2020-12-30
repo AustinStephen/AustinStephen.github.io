@@ -8,6 +8,7 @@
 		margin: auto;
 		border-bottom: 1px solid black;
 		background-color:rgb(189, 189, 189);
+		width:auto;
 		}
 	#name {
 		margin-left: 2%;
@@ -23,7 +24,7 @@
 		text-decoration:none;
 		zindex:2;
 		width: auto;
-		
+		overflow: scroll;
 	}
 	#directory {
 		margin-left:1%;
