@@ -5,9 +5,15 @@
 	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	body {
+	background-image: url('./images/campus-aerial.jpg');
+	padding:0px;
+	margins:0px;
+	}
+	</style>
 </head>
 <body>
-
 <h1> <div id="name"> Austin Stephen <div> </h1> 
 <h2> 	
 	<a target="_self" href="./index.html" style="text-decoration:none;color:rgb(92, 72, 18)"> Home </a> 
@@ -15,64 +21,65 @@
 	<a target="_self" href="./projects.html" style="text-decoration:none;color:rgb(92, 72, 18)"> Projects </a>
 	<a target="_self" href="./contact.html" style="text-decoration:none;color:rgb(92, 72, 18)"> Contact </a>
 </h2>
-<img id="background" src="./images/campus-aerial.jpg">		
+<!-- <img id="background" src="./images/campus-aerial.jpg"> -->
 
-<!-- Body -->
-<!-- The languages I know -->
+	<!-- Body -->
+	<!-- The languages I know -->
 <div id="body_resume">
-<div id="resume_doc" > 
-	1 page resume available to download. <a target="_blank" href="./files/resume.pdf" >Resume.pdf </a>
-</div>
-<div id="languages">	
-	<div class="headder"> Languages: </div>
-		<table id="table1"> 
+	<div class="box" > 
+		1 page resume available to download. <a target="_blank" href="./files/resume.pdf" >Resume.pdf </a>
+	</div>
+	<div class="box">	
+		<div class="headder"> Languages: </div>
+			<table id="table1"> 
+					<tr> 
+						<th> Language </th> 
+						<th> Proficiency(1-10)</th>
+						<th> Project </th> 
+					</tr> 
 				<tr> 
-					<th> Language </th> 
-					<th> Proficiency(1-10)</th>
-					<th> Project </th> 
+					<td> R </td> <td> 7/10 </td> <td> <a target="_blank" href="https://github.com/AustinStephen/CrossCountryOptimization" > Cross Country Optimization </a> </td>
 				</tr> 
-			<tr> 
-				<td> R </td> <td> 7/10 </td> <td> <a target="_blank" href="https://github.com/AustinStephen/CrossCountryOptimization" > Cross Country Optimization </a> </td>
-			</tr> 
-			<tr> 
-				<td> C++ </td> <td> 7/10 </td> <td> <!-- add a project here --> </td>
-			</tr>
-			<tr>
-				<td> Bash </td> <td> 5/10 </td> <td> <!-- add a project here --> </td>
-			</tr>
-			<tr> 
-				<td> html/CSS </td> <td> 3/10 </td> <td> <!-- add a project here --> </td>
-			</tr>
-			<tr> 
-				<td> Python </td> <td> 3/10 </td> <td> <!-- add a project here --> </td>
-			</tr>
-			<tr> 
-				<td> X86 Assembly </td> <td> 2/10 </td> <td> <!-- add a project here --> </td>
-			</tr>
-		</table>
+				<tr> 
+					<td> C++ </td> <td> 7/10 </td> <td> <!-- add a project here --> </td>
+				</tr>
+				<tr>
+					<td> Bash </td> <td> 5/10 </td> <td> <!-- add a project here --> </td>
+				</tr>
+				<tr> 
+					<td> html/CSS </td> <td> 3/10 </td> <td> <!-- add a project here --> </td>
+				</tr>
+				<tr> 
+					<td> Python </td> <td> 3/10 </td> <td> <!-- add a project here --> </td>
+				</tr>
+				<tr> 
+					<td> X86 Assembly </td> <td> 2/10 </td> <td> <!-- add a project here --> </td>
+				</tr>
+			</table>
+	</div>
+	<!-- Sample projects -->
+	<div class="box">
+		<div class="headder"> Technologies: </div>
+			<table id="table2">
+				<tr> 
+					<th> Technology </th>
+					<th> Proficiency (1-10)</th>
+				</tr>
+				<tr>
+					<td>Docker/Singularity </td> <td> 7/10 </td>
+				</tr>
+				<tr>
+					<td>Windows OS</td> <td> 7/10 </td>
+				</tr>
+				<tr>
+					<td>Linux OS/command line</td> <td> 6/10 </td>
+				</tr>
+				<tr>
+					<td>SLURM HPC schedular</td> <td> 5/10 </td>
+				</tr>
+			</table>
+	</div>				
 </div>
-<!-- Sample projects -->
-<div id="technologies">
-	<div class="headder"> Technologies: </div>
-		<table id="table2">
-			<tr> 
-				<th> Technology </th>
-				<th> Proficiency (1-10)</th>
-			</tr>
-			<tr>
-				<td>Docker/Singularity </td> <td> 7/10 </td>
-			</tr>
-			<tr>
-				<td>Windows OS</td> <td> 7/10 </td>
-			</tr>
-			<tr>
-				<td>Linux OS/command line</td> <td> 6/10 </td>
-			</tr>
-			<tr>
-				<td>SLURM HPC schedular</td> <td> 5/10 </td>
-			</tr>
-</div>		
-		
 </div>
 </body>
 </html>
