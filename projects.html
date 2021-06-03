@@ -18,22 +18,27 @@
 </head>
 <body>
 
-<h1> <div id="name"> Austin Stephen <div> </h1> 
-<h2> 	
-	<div id= "directory">
-	<a target="_self" href="./index.html" style="text-decoration:none;color:rgb(92, 72, 18)"> Home </a> 
-	<a target="_self" href="./projects.html" style="text-decoration:none;color:rgb(92, 72, 18)"> Projects </a>
-	<a target="_self" href="./hobbies.html" style="text-decoration:none;color:rgb(92, 72, 18)"> Hobbies </a> 
-	<a target="_self" href="./contact.html" style="text-decoration:none;color:rgb(92, 72, 18)"> Contact </a>
-	</div>
-</h2>
+<h1>
+<div id="name"> Austin Stephen <div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="navbar">
+  <a href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a class="active" href="./projects.html"> Projects</a>
+  <a href="./hobbies.html"> Hobbies</a>
+  <a href="./contact.html"> Contact</a>
+</div>
+</h1>
 
 <!--body -->
 <div id="projects">
 	<div class="box">
 		<div class="headder" >
-			Reseach: Automated Algorithm selection
+			Automated Algorithm Selection
 		</div>
+			Organization: University of Wyoming <br>
+			Languages: Bash, R, Python <br> <br>
 			In the MALLET lab I work on a project improving automated algorithm selection. Traditionally, automated algorithm selection models are trained on the problem instance
 			feature values and performance data from algorithm runs. The project I work on showed training these automated algorithm selection
 			models on the feature values of the algorithms in addition to problem instance features improves overall performance.
@@ -53,8 +58,10 @@
 <!--Stanford Project -->
 	<div class="box">
 		<div class="headder"> 
-		Research: AI index
+		AI Index
 		</div>
+		Organization: University of Wyoming & Stanford University <br>
+		Languages: Bash, R <br> <br>
 		Every year the HAI lab at Stanford and partners release a report tracking and summarizing progress in the field of AI. 
 		I ran a set of computational experiments using the high-performance computing cluster at the University of Wyoming that showed the improvements in Boolean Satisfiability solvers over the last 5 years. 
 		My experiments were used in the report and I was cited for my contribution on page 72.
@@ -71,6 +78,8 @@
 		<div class="headder"> 
 		Cross-Country Optimization
 		</div>
+		Organization: none <br>
+		Languages: R <br> <br>
 		I've been an avid runner for nearly a decade now and my brother currently runs for a collegiate cross-country and track program. One day we were discussing the NCAA national meet when
 		I realized the way cross-country meets are scored means leaves room for optimization. The closer a runner is to the median of the field the same percentage improvement in their time has a 
 		greater positive impact on their team's score. I set out to model and visualize this relationship in R. Check out the graphic below I made using ggplot to get a visual sense for why this is the case.
