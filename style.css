@@ -164,7 +164,7 @@ h1{
 
 * {box-sizing: border-box}
 
-.mySlides1, .mySlides2 {display: none}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4 {display: none}
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -177,6 +177,7 @@ img {vertical-align: middle;}
   position: relative;
   margin: auto;
   border: 12px ridge rgb(92, 72, 18);
+  background-color = black;
 }
 
 /* Next & previous buttons */
