@@ -14,7 +14,7 @@ h1{
 	#name {
 	} 
 
-/* Main page and headder */
+/* Main page and header */
 	/* Nav bar */ 
 
 		.navbar {
@@ -91,7 +91,7 @@ h1{
 		text-algin: right;	
 	}
 	/* Classes for Resume Projects and Contact pages */
-	.headder {
+	.header {
 		font-size: 2em;
 		margin-top: 1%;
 		margin-bottom: 1%;
@@ -148,6 +148,10 @@ h1{
 	#projects {
 		font-size: 1.25em;
 	}
+	/* Hobbies page */
+	#hobbies{
+		font-size: 1.25em;
+	}
 	/* contact page */
 	#contact {
 		font-size: 1.5em;
@@ -159,7 +163,6 @@ h1{
 		margin-bottom:2%;
 		
 	}
-
 	/* Slides styles */
 
 * {box-sizing: border-box}
