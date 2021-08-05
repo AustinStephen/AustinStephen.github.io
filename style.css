@@ -164,6 +164,13 @@ h1{
 		
 	}
 	/* Slides styles */
+	
+	/*Other*/
+	#other_descrip {
+		width: 80%;
+		text-align: center;
+		margin-left:9%;
+	}
 
 * {box-sizing: border-box}
 
