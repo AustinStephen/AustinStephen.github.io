@@ -96,7 +96,11 @@ h1{
 		margin-top: 1%;
 		margin-bottom: 1%;
 	}
-	
+	.header_2 {
+		font-size: 1.25em;
+		margin-top: 1%;
+		margin-bottom: 0%;
+	}
 	.box {
 		margin-top:2%;
 		margin-left:2%;
@@ -143,10 +147,10 @@ h1{
 	
 	/* Projects Page */
 	#research_video {
-		margin-top:4%;
-		border: 8px ridge grey;
-		width: 495px;
-		height: 285px
+		margin-top:1%;
+		border: 14px ridge grey;
+		width: 507px;
+		height: 297px
 	}
 	#projects {
 		font-size: 1.25em;
