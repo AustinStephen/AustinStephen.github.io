@@ -8,8 +8,6 @@ h1{
 	font-size:6em;
 	margin-top:0;
 }
-
-	
 `/* name in the header */
 	#name {
 	} 
@@ -194,7 +192,7 @@ img {vertical-align: middle;}
   position: relative;
   margin: auto;
   border: 12px ridge rgb(92, 72, 18);
-  background-color = black;
+  background-color: black;
 }
 
 /* Next & previous buttons */
