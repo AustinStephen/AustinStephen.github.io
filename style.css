@@ -146,9 +146,9 @@ h1{
 	/* Projects Page */
 	#research_video {
 		margin-top:1%;
-		border: 14px ridge grey;
-		width: 507px;
-		height: 297px
+		border: 8px ridge grey;
+		width: 496px;
+		height: 285px
 	}
 	#projects {
 		font-size: 1.25em;
