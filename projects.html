@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 	<title>Austin Stephen</title>
 	<link rel="stylesheet" href="style.css">
@@ -17,7 +18,6 @@
 	</style>
 </head>
 <body>
-
 <h1>
 <div id="name"> Austin Stephen </div>
 
@@ -31,11 +31,39 @@
 </div>
 </h1>
 
+
 <!--body -->
 <div id="projects">
 
+<div class="button_wrap">
+	<div class="dropdown">
+		<button onclick="getVals()" class="dropbtn">Category</button>
+		<div id="myDropdown" class="dropdown-content">
+			<div id="myBtnContainer">
+				<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+				<button class="btn" onclick="filterSelection('Research')"> Research</button>
+				<button class="btn" onclick="filterSelection('Sports')"> Sports Analytics</button>
+				<button class="btn" onclick="filterSelection('Hackathon')"> Hackathon</button>
+				<button class="btn" onclick="filterSelection('Other')"> Other</button>
+			
+			</div>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button onclick="getVals2()" class="dropbtn">Language</button>
+		<div id="myDropdown2" class="dropdown-content">
+			<div id="myBtnContainer">
+				<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+				<button class="btn" onclick="filterSelection('R')"> R</button>
+				<button class="btn" onclick="filterSelection('Python')"> Python </button>
+				<button class="btn" onclick="filterSelection('Java')"> Java</button>
+				<button class="btn" onclick="filterSelection('other')"> Other</button>
+			</div>
+		</div>
+	</div>
+</div>
 <!-- CMU -->
-<div class="box">
+<div class="filterDiv Research Sports R">
 	<div class="header"> 
 		Tired of Misattribution, Fatigue in the NBA
 		</div>
@@ -60,9 +88,8 @@
 		</div>
 </div>	
 
-
 <!--Stanford Project -->
-	<div class="box">
+	<div class="filterDiv Research R Other">
 		<div class="header"> 
 		AI Index
 		</div>
@@ -79,7 +106,7 @@
 	</div>	
 
 <!--MALLET Work -->
-	<div class="box">
+	<div class="filterDiv Research R Python">
 		<div class="header" >
 			Automated Algorithm Selection
 		</div>
@@ -101,8 +128,8 @@
 		</div>
 	</div>
 
-<!--Cross Prject -->
-<div class="box">
+<!--Stocks Prject -->
+<div class="filterDiv Hackathon R">
 	<div class="header"> 
 	Lets Stock About the Environment
 	</div>
@@ -122,7 +149,7 @@
 
 
 <!--Cross Prject -->
-	<div class="box">
+	<div class="filterDiv Sports Other R">
 		<div class="header"> 
 		Cross-Country Optimization
 		</div>
@@ -140,7 +167,7 @@
 		
 	</div>	
 <!-- Maze Game --> 
-	<div class="box">
+	<div class="filterDiv Other Java">
 		<div class="header">
 		Complete the Maze 
 		</div>
@@ -157,3 +184,4 @@
 		<a href="https://github.com/AustinStephen/MazeGame.git">link</a>
 		</div>
 
+<script src="./scripts.js"></script>
