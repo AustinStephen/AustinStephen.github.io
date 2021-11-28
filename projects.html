@@ -35,60 +35,60 @@
 <!--body -->
 <div id="projects">
 
-<div class="button_wrap">
-	<div class="dropdown">
-		<button onclick="getVals()" class="dropbtn">Category</button>
-		<div id="myDropdown" class="dropdown-content">
-			<div id="myBtnContainer">
-				<button class="btn active" onclick="filterSelection('all')"> Show all</button>
-				<button class="btn" onclick="filterSelection('Research')"> Research</button>
-				<button class="btn" onclick="filterSelection('Sports')"> Sports Analytics</button>
-				<button class="btn" onclick="filterSelection('Hackathon')"> Hackathon</button>
-				<button class="btn" onclick="filterSelection('Fun')"> Fun</button>
-			
+	<div class="button_wrap">
+		<div class="dropdown">
+			<button onclick="getVals()" class="dropbtn">Category</button>
+			<div id="myDropdown" class="dropdown-content">
+				<div id="myBtnContainer">
+					<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+					<button class="btn" onclick="filterSelection('Research')"> Research</button>
+					<button class="btn" onclick="filterSelection('Sports')"> Sports Analytics</button>
+					<button class="btn" onclick="filterSelection('Hackathon')"> Hackathon</button>
+					<button class="btn" onclick="filterSelection('Fun')"> Fun</button>
+				
+				</div>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button onclick="getVals2()" class="dropbtn">Language</button>
+			<div id="myDropdown2" class="dropdown-content">
+				<div id="myBtnContainer">
+					<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+					<button class="btn" onclick="filterSelection('R')"> R</button>
+					<button class="btn" onclick="filterSelection('Python')"> Python </button>
+					<button class="btn" onclick="filterSelection('Java')"> Java</button>
+					<button class="btn" onclick="filterSelection('Other')"> Other</button>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="dropdown">
-		<button onclick="getVals2()" class="dropbtn">Language</button>
-		<div id="myDropdown2" class="dropdown-content">
-			<div id="myBtnContainer">
-				<button class="btn active" onclick="filterSelection('all')"> Show all</button>
-				<button class="btn" onclick="filterSelection('R')"> R</button>
-				<button class="btn" onclick="filterSelection('Python')"> Python </button>
-				<button class="btn" onclick="filterSelection('Java')"> Java</button>
-				<button class="btn" onclick="filterSelection('other')"> Other</button>
+	<!-- CMU -->
+	<div class="filterDiv Research Sports R">
+		<div class="header"> 
+			Tired of Misattribution, Fatigue in the NBA
 			</div>
-		</div>
-	</div>
-</div>
-<!-- CMU -->
-<div class="filterDiv Research Sports R">
-	<div class="header"> 
-		Tired of Misattribution, Fatigue in the NBA
-		</div>
-		<b>Organization(s):</b> <i> Carnegie Mellon University & The Atlanta Hawks </i> <br>
-		<b>Language(s):</b> <i> R </i><br> <br>
-		For summer 2021, I was a member of a 15 person cohort in an REU at Carnegie Mellon University.
-		In this program, students work on applied projects in statistics and data science through the lens of sports analytics. <br>
-		Advised by Max Horowitz at the Atlanta Hawks, my team researched the influence of player 
-		fatigue on game outcomes. We used R for scraping in-game tracking data (credit the NBAr package)
-		and aggregated over 300 variables about players on a game by game level for a decade worth of games. 
-		We found the narrative portrayed by sports media is often inaccurate, 
-		substantial evidence players achieve a high degree of recovery between games, 
-		and offered a framework for isolating factors that contribute to game outcomes.<br> <br>
-		A link to the paper will be available once we complete the publication process. <br> <br>
-		<div class="header_2"> 
-		CMSAC Project Showcase
-		</div>
-		<div id="research_video">
-			<video width="480" height="270" controls>
-				<source src="videos/NBAAustinGraceMatthew30.mp4" type="video/mp4">
-			</video>
-		</div>
-</div>	
+			<b>Organization(s):</b> <i> Carnegie Mellon University & The Atlanta Hawks </i> <br>
+			<b>Language(s):</b> <i> R </i><br> <br>
+			For summer 2021, I was a member of a 15 person cohort in an REU at Carnegie Mellon University.
+			In this program, students work on applied projects in statistics and data science through the lens of sports analytics. <br>
+			Advised by Max Horowitz at the Atlanta Hawks, my team researched the influence of player 
+			fatigue on game outcomes. We used R for scraping in-game tracking data (credit the NBAr package)
+			and aggregated over 300 variables about players on a game by game level for a decade worth of games. 
+			We found the narrative portrayed by sports media is often inaccurate, 
+			substantial evidence players achieve a high degree of recovery between games, 
+			and offered a framework for isolating factors that contribute to game outcomes.<br> <br>
+			A link to the paper will be available once we complete the publication process. <br> <br>
+			<div class="header_2"> 
+			CMSAC Project Showcase
+			</div>
+			<div id="research_video">
+				<video width="480" height="270" controls>
+					<source src="videos/NBAAustinGraceMatthew30.mp4" type="video/mp4">
+				</video>
+			</div>
+	</div>	
 
-<!--Stanford Project -->
+	<!--Stanford Project -->
 	<div class="filterDiv Research R Other">
 		<div class="header"> 
 		AI Index
@@ -105,27 +105,27 @@
 		Full Report(pg. 72): <a href="https://aiindex.stanford.edu/wp-content/uploads/2021/03/2021-AI-Index-Report_Master.pdf" > 2021 AI Index </a>
 	</div>	
 
-<!--Stocks Prject -->
-<div class="filterDiv Hackathon Fun R">
-	<div class="header"> 
-	Lets Stock About the Environment
-	</div>
-	<b>Organization(s):</b> <i> TAMU Datathon </i> <br>
-	<b>Languages(s):</b> <i> R </i><br> <br>
-	As part of the 2021 TAMU datathon Goldman Sachs & Co put out a challenge to model the relationship between the stock market and the environment. 
-	My team got <i> first place </i> in this 24 hour challenge and in that time I built our primary series of models. <br> <br>
-	After discussing how the markets might behave in conjunction with the environment, I realized there would be a serious issue decomposing what is responsible for market changes. 
-	My teams exploratory analysis confirmed that many of our environmental metrics worsened over time while the market grew; 
-	however, these trends were not necessarily systemically related. The goal of my contribution became how do I expose the underlying relationship between the environment and market 
-	behavior in absence of the growth of the US economy. For the details on how I went about this you can check out the devpost. <br> <br>
+	<!--Stocks Prject -->
+	<div class="filterDiv Hackathon Fun R">
+		<div class="header"> 
+		Lets Stock About the Environment
+		</div>
+		<b>Organization(s):</b> <i> TAMU Datathon </i> <br>
+		<b>Languages(s):</b> <i> R </i><br> <br>
+		As part of the 2021 TAMU datathon Goldman Sachs & Co put out a challenge to model the relationship between the stock market and the environment. 
+		My team got <i> first place </i> in this 24 hour challenge and in that time I built our primary series of models. <br> <br>
+		After discussing how the markets might behave in conjunction with the environment, I realized there would be a serious issue decomposing what is responsible for market changes. 
+		My teams exploratory analysis confirmed that many of our environmental metrics worsened over time while the market grew; 
+		however, these trends were not necessarily systemically related. The goal of my contribution became how do I expose the underlying relationship between the environment and market 
+		behavior in absence of the growth of the US economy. For the details on how I went about this you can check out the devpost. <br> <br>
 
-	The devpost. <a href="https://devpost.com/software/394698" > Lets-Stock-About-The-Env </a>
-	
-	
-</div>	
+		The devpost. <a href="https://devpost.com/software/394698" > Lets-Stock-About-The-Env </a>
+		
+		
+	</div>	
 
 
-<!--Cross Prject -->
+	<!--Cross Prject -->
 	<div class="filterDiv Sports Fun R">
 		<div class="header"> 
 		Cross-Country Optimization
@@ -146,8 +146,8 @@
 		
 		
 	</div>	
-<!-- Maze Game --> 
-	<div class="filterDiv Other Java">
+	<!-- Maze Game --> 
+	<div class="filterDiv Java">
 		<div class="header">
 		Complete the Maze 
 		</div>
@@ -164,7 +164,7 @@
 
 		<br> <br> The code is available at this github repo: <br>
 		<a href="https://github.com/AustinStephen/MazeGame.git">link</a>
-		</div>
+	</div>
 
 	<!--MALLET Work -->
 	<div class="filterDiv Research R Python">

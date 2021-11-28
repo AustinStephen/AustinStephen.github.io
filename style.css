@@ -325,8 +325,11 @@ img {vertical-align: middle;}
   }
   
   .button_wrap {
+	width: 60% ;
 	margin-left:14%;
+	padding-right:12%;
+
   }
   .dropdown a:hover {background-color: #ddd;}
   
-  .show {display: block;}
+  .show_drop {display: block;}
