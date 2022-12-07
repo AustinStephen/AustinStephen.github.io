@@ -71,15 +71,15 @@
 			</div>
 			<b>Organization(s):</b> <i> Carnegie Mellon University & The Atlanta Hawks </i> <br>
 			<b>Language(s):</b> <i> R </i><br> <br>
-			For summer 2021, I was a member of a 15 person cohort in an REU at Carnegie Mellon University.
-			In this program, students work on applied projects in statistics and data science through the lens of sports analytics. <br>
-			Advised by Max Horowitz at the Atlanta Hawks, my team researched the influence of player 
-			fatigue on game outcomes. We used R for scraping in-game tracking data (credit the NBAr package)
-			and aggregated over 300 variables about players on a game by game level for a decade worth of games. 
-			We found the narrative portrayed by sports media is often inaccurate, 
-			substantial evidence players achieve a high degree of recovery between games, 
-			and offered a framework for isolating factors that contribute to game outcomes.<br> <br>
-			Our ArXiv paper covers in detail our findings, it can be found <a href="https://arxiv.org/abs/2112.14649"> here</a>. <br> <br>
+			For the summer of 2021, I was a member of a 15-person cohort in an REU at Carnegie Mellon University.
+      In this program, students work on applied projects in statistics and data science through the lens of sports analytics. <br>
+      Advised by Max Horowitz at the Atlanta Hawks, my team researched the influence of player 
+      fatigue on game outcomes. We used R for scraping in-game tracking data (credit the NBAr package)
+      and aggregated over 300 variables about players on a game-by-game level for a decade worth of games. 
+      We found the narrative portrayed by sports media is often inaccurate, 
+      substantial evidence players achieve a high degree of recovery between games, 
+      and offered a framework for isolating factors that contribute to game outcomes.<br> <br>
+      Our ArXiv paper covers our findings in detail. <a href="https://arxiv.org/abs/2112.14649"> here</a>. <br> <br>
 			<div class="header_2"> 
 			CMSAC Project Showcase
 			</div>
@@ -97,12 +97,8 @@
 		</div>
 		<b>Organization(s):</b> <i> Stanford University & University of Wyoming </i> <br>
 		<b>Language(s):</b> <i>Bash, R </i><br> <br>
-		Every year the HAI lab at Stanford and partners release a report tracking and summarizing progress in AI. 
-		Using the high-performance computing cluster at the University of Wyoming I ran a set of computational experiments
-		examing the improvements in Boolean Satisfiability solvers over the last 5 years. 
-		My experiments are inclueded and I am cited on page 72.  
-		<br>
-		<br>
+		Every year the HAI lab at Stanford and partners release a report tracking and summarizing progress in AI called the AI Index.
+	  Using the high-performance computing cluster at the University of Wyoming, I ran a suite of computational experiments included in the 2021 version of this index. <br> <br>
 		Press Release: <a href="http://www.uwyo.edu/uw/news/2021/03/uw-professor,-student-contribute-pages-to-2021-ai-index.html" > Press Release </a> <br>
 		Full Report(pg. 72): <a href="https://aiindex.stanford.edu/wp-content/uploads/2021/03/2021-AI-Index-Report_Master.pdf" > 2021 AI Index </a>
 	</div>	
@@ -114,18 +110,18 @@
 		</div>
 		<b>Organization(s):</b> <i> TAMU Datathon </i> <br>
 		<b>Languages(s):</b> <i> R </i><br> <br>
-		As part of the 2021 TAMU datathon Goldman Sachs & Co put out a challenge to model the relationship between the stock market and the environment. 
-		My team got <i> first place </i> in this 24 hour challenge and in that time I built our primary series of models. <br> <br>
-		After discussing how the markets might behave in conjunction with the environment, I realized there would be a serious issue decomposing what is responsible for market changes. 
-		My team's exploratory analysis confirmed that many of our environmental metrics worsened over time while the market grew; 
-		however, these trends were not necessarily systemically related. The goal of my contribution became how do I expose the underlying relationship between the environment and market 
-		behavior in absence of the growth of the US economy. For the details on how I went about this you can check out the devpost. <br> <br>
+		As part of the 2021 TAMU datathon, Goldman Sachs put out a challenge to model the relationship between the stock market and the environment. 
+    My team got <i> first place </i> in this 24-hour challenge, and my contribution was building our primary series of models. <br> <br>
+    After discussing how the markets might behave in conjunction with the environment, I realized there would be an issue decomposing what is responsible for market changes. 
+    My team's exploratory analysis confirmed that many of our environmental metrics worsened over time while the market grew; 
+    however, these trends were not necessarily systemically related. 
+		Our solution focused on exposing the underlying relationship between the environment and market behavior adjusted for the growth of the US economy. 
+		For details on how we solved this problem, you can check out the devpost. <br> <br>
 
 		The devpost. <a href="https://devpost.com/software/394698" > Lets-Stock-About-The-Env </a>
 		
 		
 	</div>	
-
 
 	<!--Cross Prject -->
 	<div class="filterDiv Sports Fun R">
@@ -135,34 +131,34 @@
 		<b>Organization(s):</b> <i> none </i> <br>
 		<b>Languages(s):</b> <i> R </i><br> <br>
 		I've been an avid runner for nearly a decade now, and my brother currently runs for a collegiate cross-country and track program.
-        While discussing my brother's races, I realized the scoring of cross-country meets leaves room for optimization. <br> <br>
-        Team scores are computed by summing the places of the top 5 runners on a team.
-		However, a field of runners is not uniformly distributed, as a result all improvements in time do not equally influence team score. 
-		It turns out the places of runners in a cross-country race tend to be generally gaussian. 
-		This means the closer a runner is to the median of the field the same percentage improvement in their time yields a greater positive impact on their team's score. 
-		The graphic below gives a visual sense of why this is the case. 
+    While discussing my brother's races, I realized the scoring of cross-country meets leaves room for optimization. <br> <br>
+    Team scores are computed by summing the places of the top 5 runners on a team.
+    However, a field of runners is not uniformly distributed; as a result, all improvements in time do not equally influence team scores. 
+    It turns out the runners' places in a cross-country race tend to be roughly gaussian. 
+    This distribution of placing means the closer a runner is to the field median, the same percentage improvement in their time yields a more significant positive impact on their team's score. 
+    The graphic below gives a visual sense of why this is the case. 
         After validating my initial assumptions, I created a script that returns the runners on a team ordered by how sensitivities in their race influence their team's score.
-		I wrote a report linked below to formalize my thoughts on this problem and why it matters. <br>
+    I wrote a report below to formalize my thoughts on this problem and why it matters. <br>
 		<img id="graph" src="./images/running.png" style="border: 3px solid black"> <br>
 		The full report. <a href="./files/Optimizing_Collegiate_Cross.pdf" > Cross-country.pdf </a>
 		
 		
 	</div>	
 	<!-- Maze Game --> 
-	<div class="filterDiv Java">
+	<div class="filterDiv Java School">
 		<div class="header">
 		Complete the Maze 
 		</div>
 		<b> Organization(s): </b> <i> University of Wyoming </i> <br>
 		<b>Languages(s):</b> <i> Java </i><br> <br>
-		For COSC 3011, as part of a 4-person team, I wrote a complete the maze game.
+    For COSC 3011, as part of a 4-person team, I wrote a complete the maze game.
         The game consists of a GUI, timing system, reading and writing to binary files to
-        store and retrieve the state of the game, and the ability for users to upload their own mazes.
-        The project was an exercise in the implementation of concepts that increase the robustness of large software systems.
-        It was accompanied by changes in design requirements throughout the development process
+        store and retrieve the state of the game, and users can upload their own mazes.
+        The project was an exercise in implementing concepts that increase the robustness of large software systems.
+        The course changed design requirements throughout the development process
         challenging teams’ use of encapsulation. 
-		In the git repo, there are design docs detailing the design decisions we made as a team, 
-		a users manual, and a discussion of the different issues we encountered throughout the project.
+    In the git repo, there are design docs detailing the design decisions we made as a team, 
+    a user manual, and a discussion of the different issues we encountered throughout the project.
 
 		<br> <br> The code is available at this github repo: <br>
 		<a href="https://github.com/AustinStephen/MazeGame.git">link</a>
