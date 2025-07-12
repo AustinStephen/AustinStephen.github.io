@@ -1,52 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
 <head>
-	<title>Austin Stephen</title>
-	<link rel="stylesheet" href="style.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-	body {
-	background-image: url('./images/campus-aerial.jpg');
-	background-attachment:fixed;
-	background-size:cover;
-	background-repeat: no-repeat;
-	padding:0;
-	margin:0;
-	}
-		
-	</style>
+  <meta charset="utf-8">
+  <title>Austin Stephen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #333;
+      background: #fafafa;
+    }
+
+    /* Header & nav */
+    header {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin: 0 auto 0 0;
+    }
+    nav a {
+      margin-right: 0.75rem;
+      text-decoration: none;
+      color: #555;
+    }
+    nav a.active,
+    nav a:hover {
+      color: #0366d6;
+    }
+
+    /* Main content */
+    main {
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    #photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 8px; /* middle ground between square and circle */
+      object-fit: cover;
+      float: right;
+      margin: 0 0 1rem 1rem;
+    }
+    #description {
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 0;
+      font-size: 0.8rem;
+      text-align: center;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Austin Stephen</h1>
+    <nav>
+      <a class="active" href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="./projects.html">Projects</a>
+    </nav>
+  </header>
 
-<h1>
-<div id="name"> Austin Stephen </div>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<div class="navbar">
-  <a class="active" href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-  <a href="./projects.html"> Projects</a>
-  <a href="./contact.html"> Contact</a>
-</div>
-</h1>
-			
-<div id="main_box"> 
-	
-	<!-- <img id="photo" src="./images/Portrait2.JPG" alt="Phtoto of Austin Stephen"> -->
-	<img id="photo" src="./images/mountain.JPG" alt="Phtoto of Austin Stephen">
-	<div id="description"> 
-		Welcome to my website!  <br> <br>  
-		
-		I use this as an archive of projects from over the years. My background is in statistics and computer science, so most of the problems I've worked on live somewhere at that intersection. 
-<br> <br>
-		In school, I spent several years in the MALLET Lab at the University of Wyoming, working on AutoML and algorithm selection. I also did and REU at CMU and an internship at Goldman Sachs in both I got to work on some interesting problems. 
-		These days, I lead much of the engineering effort at Eye to Eye, where we're building a rebound tonometer.
-<br> <br>
-		There's a lot happening at E2E so if you're interested in medical devices, feel free to reach out. We are always looking for talented people to join our team.
-</div>
-</div>
+  <main>
+    <img id="photo" src="./images/mountain.JPG" alt="Phtoto of Austin Stephen">
+    <div id="description">
+      Welcome to my website!  <br><br>
+      
+      In school, I spent several years in the MALLET Lab at the University of Wyoming,
+	  working on AutoML and algorithm selection. I also did an REU at Carnegie Mellon University and an internship 
+	  at Goldman Sachs, where I got to work on some interesting problems. <br> <br>
+	  
+	  These days, I lead much of the engineering effort at Eye to Eye. We are a very small 
+	  medical device start up building tonometers. There's a lot happening at E2E so 
+	  if you're interested in medical devices, feel free to reach out. We are always looking 
+	  for talented people to join our team. <br><br>
+	  I'm best reached at austinstephen98@gmail.com
+    </div>
+  </main>
 
 </body>
 </html>
