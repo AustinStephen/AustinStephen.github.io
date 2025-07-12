@@ -1,218 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-	<title>Austin Stephen</title>
-	<link rel="stylesheet" href="style.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-	body {
-	background-image: url('./images/campus-aerial.jpg');
-	background-attachment:fixed;
-	background-size:cover;
-	background-repeat: no-repeat;
-	padding:0;
-	margin:0;
-	}
-	</style>
+  <meta charset="utf-8">
+  <title>Projects – Austin Stephen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Base styles (mirrors index.html) */
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #333;
+      background: #fafafa;
+    }
+
+    /* Header & nav */
+    header {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin: 0 auto 0 0;
+    }
+    nav a {
+      margin-right: 0.75rem;
+      text-decoration: none;
+      color: #555;
+    }
+    nav a.active,
+    nav a:hover {
+      color: #0366d6;
+    }
+
+    /* Filters */
+    #filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      max-width: 700px;
+      margin: 2rem auto 1rem;
+      padding: 0 1rem;
+    }
+    .filter-btn {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: #0366d6;
+      color: #fff;
+      border-color: #0366d6;
+    }
+
+    /* Projects grid */
+    #projects {
+      display: grid;
+      gap: 1.5rem;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      padding: 0 1rem;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+    .project-card h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+    .meta {
+      font-size: 0.8rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+    .project-card a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Media fit */
+    .project-card iframe,
+    .project-card video,
+    .project-card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-top: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-<h1>
-<div id="name"> Austin Stephen </div>
+  <header>
+    <h1>Austin Stephen</h1>
+    <nav>
+      <a href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a class="active" href="./projects.html">Projects</a>
+    </nav>
+  </header>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<div class="navbar">
-  <a href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-  <a class="active" href="./projects.html"> Projects</a>
+  <!-- Filter buttons -->
+  <div id="filters">
+    <button class="filter-btn active" data-filter="all">Show all</button>
+    <button class="filter-btn" data-filter="AutoML">AutoML</button>
+    <button class="filter-btn" data-filter="Sports">Sports</button>
+    <button class="filter-btn" data-filter="Stocks">Stock Market</button>
 </div>
-</h1>
 
-
-<!--body -->
-<div id="projects">
-
-	<div class="button_wrap">
-		<div class="dropdown">
-			<button onclick="getVals()" class="dropbtn">Category</button>
-			<div id="myDropdown" class="dropdown-content">
-				<div id="myBtnContainer">
-					<button class="btn active" onclick="filterSelection('all')"> Show all</button>
-					<button class="btn" onclick="filterSelection('Research')"> Research</button>
-					<button class="btn" onclick="filterSelection('Sports')"> Sports Analytics</button>
-					<button class="btn" onclick="filterSelection('Hackathon')"> Hackathon</button>
-					<button class="btn" onclick="filterSelection('School')"> School</button>
-					<button class="btn" onclick="filterSelection('Fun')"> Fun</button>
-				
-				</div>
-			</div>
-		</div>
-		<div class="dropdown">
-			<button onclick="getVals2()" class="dropbtn">Language</button>
-			<div id="myDropdown2" class="dropdown-content">
-				<div id="myBtnContainer">
-					<button class="btn active" onclick="filterSelection('all')"> Show all</button>
-					<button class="btn" onclick="filterSelection('R')"> R</button>
-					<button class="btn" onclick="filterSelection('Python')"> Python </button>
-					<button class="btn" onclick="filterSelection('Java')"> Java</button>
-					<button class="btn" onclick="filterSelection('C')"> C</button>
-					<button class="btn" onclick="filterSelection('Other')"> Other</button>
-				</div>
-			</div>
-		</div>
+<!-- Projects list -->
+<main id="projects">
+	<div class="project-card AutoML">
+		<h2>Assessing Homogeneity of the Data Generating Process for Supervised Learning</h2>
+	  	<div class="meta"><b>Year:</b> 2023</div>
+	  	<div class="meta"><b>Organization:</b> University of Wyoming</div>
+	  	<p>Traditional ML pipelines assume the entire training set comes from one data-generating process, but today's data are often too diverse for that to hold. 
+		   We recast the usual combined algorithm-and-hyperparameter search (CASH) as partitioned CASH (PCASH): first cluster the data into more homogeneous groups, then optimize models within each cluster. Experiments on synthetic data and the Boston Housing set show that this automatic partitioning makes models far more robust to hidden heterogeneity. In fact, PCASH cuts root-mean-squared error by 26 % versus the standard approach when using multiple linear regression. 
+		   This suggests embracing multiple sub-processes, not one, can materially improve generalization.</p>
+	  <p><a href="./files/Senior_Thesis_Final_Draft.pdf">Read the report</a></p>
 	</div>
-	<!-- CMU -->
-	<div class="filterDiv Research Sports R">
-		<div class="header"> 
-			Tired of Misattribution, Fatigue in the NBA
-			</div>
-			<b>Organization(s):</b> <i> Carnegie Mellon University & The Atlanta Hawks </i> <br>
-			<b>Language(s):</b> <i> R </i><br> <br>
-			For the summer of 2021, I was a member of a 15-person cohort in an REU at Carnegie Mellon University.
-      In this program, students work on applied projects in statistics and data science through the lens of sports analytics. <br>
-      Advised by Max Horowitz at the Atlanta Hawks, my team researched the influence of player 
-      fatigue on game outcomes. We used R for scraping in-game tracking data (credit the NBAr package)
-      and aggregated over 300 variables about players on a game-by-game level for a decade worth of games. 
-      We found the narrative portrayed by sports media is often inaccurate, 
-      substantial evidence players achieve a high degree of recovery between games, 
-      and offered a framework for isolating factors that contribute to game outcomes.<br> <br>
-      Our ArXiv paper covers our findings in detail. <a href="https://arxiv.org/abs/2112.14649"> here</a>. <br> <br>
-			<div class="header_2"> 
-			CMSAC Project Showcase
-			</div>
-			<div id="research_video">
-				<video width="480" height="270" controls>
-					<source src="videos/NBAAustinGraceMatthew30.mp4" type="video/mp4">
-				</video>
-			</div>
-	</div>	
+    <!-- CMU / NBA fatigue study -->
+    <div class="project-card Sports">
+      <h2>Tired of Misattribution, Fatigue in the NBA</h2>
+      <div class="meta"><b>Organization:</b> Carnegie Mellon University &amp; The Atlanta Hawks</div>
+	  <div class="meta"><b>Year:</b> 2021</div>
+      <p>In the 2021 CMU Sports Analytics REU, my team researched how player fatigue influences NBA game outcomes. We scraped and engineered 300+ variables from a decade of tracking data, showing media narratives around fatigue are often overstated. Our framework isolates factors that truly swing results.</p>
+      <p><a href="https://arxiv.org/abs/2112.14649">Read the paper</a></p>
+      <video controls>
+        <source src="videos/NBAAustinGraceMatthew30.mp4" type="video/mp4">
+      </video>
+    </div>
 
-	<!--Stanford Project -->
-	<div class="filterDiv Research R Other">
-		<div class="header"> 
-		AI Index
-		</div>
-		<b>Organization(s):</b> <i> Stanford University & University of Wyoming </i> <br>
-		<b>Language(s):</b> <i>Bash, R </i><br> <br>
-		Every year the HAI lab at Stanford and partners release a report tracking and summarizing progress in AI called the AI Index.
-	  Using the high-performance computing cluster at the University of Wyoming, I ran a suite of computational experiments included in the 2021 version of this index. <br> <br>
-		Press Release: <a href="http://www.uwyo.edu/uw/news/2021/03/uw-professor,-student-contribute-pages-to-2021-ai-index.html" > Press Release </a> <br>
-		Full Report(pg. 72): <a href="https://aiindex.stanford.edu/wp-content/uploads/2021/03/2021-AI-Index-Report_Master.pdf" > 2021 AI Index </a>
-	</div>	
+    <!-- Stanford / AI Index -->
+    <div class="project-card AutoML">
+      <h2>Stanford AI Index Experiments</h2>
+      <div class="meta"><b>Organization:</b> Stanford University &amp; University of Wyoming</div>
+	  <div class="meta"><b>Year:</b> 2021</div>
+      <p>I ran a suite of HPC experiments that feed into Stanford’s 2021 <em>AI Index</em> report, tracking global progress in AI. My runs populated performance benchmarks cited in the final publication.</p>
+      <p>
+        <a href="http://www.uwyo.edu/uw/news/2021/03/uw-professor,-student-contribute-pages-to-2021-ai-index.html">Press release</a> ·
+        <a href="https://aiindex.stanford.edu/wp-content/uploads/2021/03/2021-AI-Index-Report_Master.pdf">Full report (p 72)</a>
+      </p>
+    </div>
 
-	<!--Stocks Prject -->
-	<div class="filterDiv Hackathon Fun R">
-		<div class="header"> 
-		Lets Stock About the Environment
-		</div>
-		<b>Organization(s):</b> <i> TAMU Datathon </i> <br>
-		<b>Languages(s):</b> <i> R </i><br> <br>
-		As part of the 2021 TAMU datathon, Goldman Sachs put out a challenge to model the relationship between the stock market and the environment. 
-    My team got <i> first place </i> in this 24-hour challenge, and my contribution was building our primary series of models. <br> <br>
-    After discussing how the markets might behave in conjunction with the environment, I realized there would be an issue decomposing what is responsible for market changes. 
-    My team's exploratory analysis confirmed that many of our environmental metrics worsened over time while the market grew; 
-    however, these trends were not necessarily systemically related. 
-		Our solution focused on exposing the underlying relationship between the environment and market behavior adjusted for the growth of the US economy. 
-		For details on how we solved this problem, you can check out the devpost. <br> <br>
+    <!-- TAMU Datathon -->
+    <div class="project-card Stocks">
+      <h2>Let's Stock About the Environment</h2>
+      <div class="meta"><b>Organization:</b> TAMU Datathon</div>
+      <div class="meta"><b>Year:</b> 2022 </div>
+      <p>First-place project at the 2021 TAMU Datathon (Goldman Sachs challenge). We modeled relationships between environmental metrics and market behavior, adjusting for growth in the US economy.</p>
+      <p><a href="https://devpost.com/software/394698">Devpost</a></p>
+    </div>
 
-		The devpost. <a href="https://devpost.com/software/394698" > Lets-Stock-About-The-Env </a>
-		
-		
-	</div>	
+    <!-- Cross-country optimization -->
+    <div class="project-card Sports">
+      <h2>Cross-Country Optimization</h2>
+	  <div class="meta"><b>Year</b> 2020</div>
+      <p>A script that ranks runners by the marginal impact of their performance on team scores, exploiting the near-Gaussian distribution of finishing places in XC races.</p>
+      <img src="./images/running.png" alt="Cross-country distribution graphic">
+      <p><a href="./files/Optimizing_Collegiate_Cross.pdf">Read the report</a></p>
+    </div>
+  </main>
 
-	<!--Cross Prject -->
-	<div class="filterDiv Sports Fun R">
-		<div class="header"> 
-		Cross-Country Optimization
-		</div>
-		<b>Organization(s):</b> <i> none </i> <br>
-		<b>Languages(s):</b> <i> R </i><br> <br>
-		I've been an avid runner for nearly a decade now, and my brother currently runs for a collegiate cross-country and track program.
-    While discussing my brother's races, I realized the scoring of cross-country meets leaves room for optimization. <br> <br>
-    Team scores are computed by summing the places of the top 5 runners on a team.
-    However, a field of runners is not uniformly distributed; as a result, all improvements in time do not equally influence team scores. 
-    It turns out the runners' places in a cross-country race tend to be roughly gaussian. 
-    This distribution of placing means the closer a runner is to the field median, the same percentage improvement in their time yields a more significant positive impact on their team's score. 
-    The graphic below gives a visual sense of why this is the case. 
-        After validating my initial assumptions, I created a script that returns the runners on a team ordered by how sensitivities in their race influence their team's score.
-    I wrote a report below to formalize my thoughts on this problem and why it matters. <br>
-		<img id="graph" src="./images/running.png" style="border: 3px solid black"> <br>
-		The full report. <a href="./files/Optimizing_Collegiate_Cross.pdf" > Cross-country.pdf </a>
-		
-		
-	</div>	
-	<!-- Maze Game --> 
-	<div class="filterDiv Java School">
-		<div class="header">
-		Complete the Maze 
-		</div>
-		<b> Organization(s): </b> <i> University of Wyoming </i> <br>
-		<b>Languages(s):</b> <i> Java </i><br> <br>
-    For COSC 3011, as part of a 4-person team, I wrote a complete the maze game.
-        The game consists of a GUI, timing system, reading and writing to binary files to
-        store and retrieve the state of the game, and users can upload their own mazes.
-        The project was an exercise in implementing concepts that increase the robustness of large software systems.
-        The course changed design requirements throughout the development process
-        challenging teams’ use of encapsulation. 
-    In the git repo, there are design docs detailing the design decisions we made as a team, 
-    a user manual, and a discussion of the different issues we encountered throughout the project.
+  <script>
+    // Simple filtering logic
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards   = document.querySelectorAll('.project-card');
 
-		<br> <br> The code is available at this github repo: <br>
-		<a href="https://github.com/AustinStephen/MazeGame.git">link</a>
-	</div>
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Highlight active button
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-	<!--MALLET Work -->
-	<div class="filterDiv Research R Python">
-		<div class="header" >
-			Automated Algorithm Selection
-		</div>
-		<b>Organization(s):</b> <i> University of Wyoming </i> <br>
-		<b>Language(s):</b> <i>Bash, R, Python </i> <br> <br>
-			In the MALLET lab I worked on a project improving automated algorithm selection. Traditionally, automated algorithm selection models are trained on the problem instance
-			feature values and performance data from algorithm runs. The project I work on showed training these automated algorithm selection
-			models on the feature values of the algorithms in addition to problem instance features improves overall performance.
-			This allows the evaluation of sets of problem instances in less time and with less memory by choosing the most optimal algorithm more frequently.<br> 
-		<br> An extended abstract on my work submitted to AAAI the Undergraduate Consortium. <a href="./files/Stephen.pdf" >Abstract.pdf </a> <br><br>
-		<div class="header_2">2020 Wyoming Research Scholars Virtual Symposium </div>
-			
-		<div id="research_video">
-			<iframe width="480" height="270" 
-				src="https://www.youtube.com/embed/XCNLWuxqhjg" 
-				frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen >
-			</iframe>
-
-		</div>
-	</div>
-
-	<!-- C utilites --> 
-	<div class="filterDiv School C">
-		<div class="header">
-		C Utilities 
-		</div>
-		<b> Organization(s): </b> <i> University of Wyoming </i> <br>
-		<b>Languages(s):</b> <i> C </i><br> <br>
-		A collection of C programs written for the course Linux Programming (COSC 3750) at the University of Wyoming.
- <br> <br>
-
- <!-- Matrix Multipier-->	
-	<b>Parallel matrix multiplier</b> <br>
-	Takes in two matrices as files, and an integer for the number of threads to distribute the workload over. 
-	Multiplies the two matrices and writes their result to a file.
- 	<br> <br>
- 
-<!-- Shell-->	
-	<b>Shell </b> <br>
-	Implemented a shell from scratch. Includes pipes, file/input/output redirects and running multiple commands using a semicolon. 
-	<br> <br>
-
-<!-- Command Line Utilities -->
-	<b>	Command Line Utilities </b> <br>
-	Implemented tar, cat and ls from scratch.
-
-		<br> <br> The code is available at this github 
-		<a href="https://github.com/AustinStephen/C_programming">repo</a>
-	</div>
-
-
-<script src="./scripts.js"></script>
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'all' || card.classList.contains(filter)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
