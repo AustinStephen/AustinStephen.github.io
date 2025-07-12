@@ -56,6 +56,177 @@
       line-height: 1.6;
     }
 
+    /* ---  Enhanced horizontal career timeline  --- */
+    #timeline {
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    .sr-only {
+      position: absolute !important;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .timeline {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #d0d0d0;
+      transform: translateY(-50%);
+    }
+
+    .timeline li {
+      position: relative;
+      flex: 1;
+      min-width: 80px;
+      height: 120px; /* provides room for labels */
+    }
+
+    /* milestone dots */
+    .timeline .dot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--dot-colour, #0366d6);
+      box-shadow: 0 0 0 4px #fff; /* halo */
+      transition: transform 0.2s ease;
+    }
+    .timeline li:hover .dot {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    /* pleasant colour cycle */
+    .timeline li:nth-child(2) .dot { --dot-colour: #00bcd4; }
+    .timeline li:nth-child(3) .dot { --dot-colour: #ff9800; }
+    .timeline li:nth-child(4) .dot { --dot-colour: #8e24aa; }
+    .timeline li:nth-child(5) .dot { --dot-colour: #e91e63; }
+
+    /* always‑visible labels */
+    .timeline .date {
+      position: absolute;
+      top: calc(50% - 38px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.75rem;
+      color: #666;
+      white-space: nowrap;
+    }
+    .timeline .label {
+      position: absolute;
+      top: calc(50% + 22px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    /* tooltip with extended details */
+    .timeline .tooltip {
+      position: absolute;
+      bottom: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%) scale(0.95);
+      background: #fff;
+      color: #333;
+      padding: 0.55rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      opacity: 0;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      pointer-events: none;
+      z-index: 2;
+      white-space: nowrap;
+    }
+    .timeline li:hover .tooltip {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+    .tooltip::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: #fff;
+    }
+
+    /* Mobile / narrow view  */
+    @media (max-width: 520px) {
+      .timeline {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 30px;
+      }
+      .timeline::before {
+        top: 0;
+        left: 15px;
+        width: 2px;
+        height: 100%;
+        transform: none;
+      }
+      .timeline li {
+        height: 90px;
+        margin-bottom: 1.5rem;
+      }
+      .timeline .dot {
+        top: 0;
+        left: 15px;
+        transform: translate(-10%, 0);
+      }
+      .timeline .date {
+        top: -2px;
+        left: calc(15px + 20px);
+        transform: none;
+      }
+      .timeline .label {
+        top: 20px;
+        left: calc(15px + 20px);
+        transform: none;
+      }
+      .timeline .tooltip {
+        left: calc(15px + 20px);
+        bottom: auto;
+        top: 50%;
+        transform: translateY(-50%) scale(0.95);
+      }
+      .timeline li:hover .tooltip {
+        transform: translateY(-50%) scale(1);
+      }
+      .tooltip::after {
+        left: -6px;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        border-top-color: transparent;
+        border-right-color: #fff;
+      }
+    }
+
     /* Footer */
     footer {
       padding: 2rem 0;
@@ -75,21 +246,64 @@
   </header>
 
   <main>
-    <img id="photo" src="./images/mountain.JPG" alt="Phtoto of Austin Stephen">
+    <img id="photo" src="./images/mountain.JPG" alt="Photo of Austin Stephen">
     <div id="description">
-      Welcome to my website!  <br><br>
+      Welcome to my website!<br><br>
       
-      In school, I spent several years in the MALLET Lab at the University of Wyoming,
-	  working on AutoML and algorithm selection. I also did an REU at Carnegie Mellon University and an internship 
-	  at Goldman Sachs, where I got to work on some interesting problems. <br> <br>
-	  
-	  These days, I lead much of the engineering effort at Eye to Eye. We are a very small 
-	  medical device start up building tonometers. There's a lot happening at E2E so 
-	  if you're interested in medical devices, feel free to reach out. We are always looking 
-	  for talented people to join our team. <br><br>
-	  I'm best reached at austinstephen98@gmail.com
+	  This website houses my a lot the things I've worked on over the years. <br> <br>
+
+      Right now, I lead much of the engineering effort at Eye to Eye. We are a very small medical device start‑up building tonometers.
+      There's a lot happening at E2E, so if you're interested in medical devices, feel free to reach out. We are always looking
+      for talented people to join our team.<br><br>
+      I'm best reached at austinstephen98@gmail.com
     </div>
+
+    <!-- Career Timeline -->
+    <section id="timeline">
+      <h2 class="sr-only">Career Timeline</h2>
+      <ul class="timeline">
+        <li>
+          <span class="dot"></span>
+          <span class="date">2019-2023</span>
+          <span class="label">UW</span>
+          <div class="tooltip"><strong>2019 - 2023</strong><br>B.S. Statistics & B.S Computer Science<br>University of Wyoming</div>
+        </li>
+		<li>
+          <span class="dot"></span>
+          <span class="date">2020-2023</span>
+          <span class="label">MALLET Lab</span>
+          <div class="tooltip"><strong>2019 - 2023</strong><br>Research fellow under Lars Kotthoff studying AutoML at the <br>Univesity of Wyoming</div>
+        </li>
+        <li>
+          <span class="dot"></span>
+          <span class="date">Summer 2021</span>
+          <span class="label">CMU REU</span>
+          <div class="tooltip"><strong>Summer 2021</strong><br>Research experience for undergraduates at <br>Carnegie Mellon University</div>
+        </li>
+        <li>
+          <span class="dot"></span>
+          <span class="date">Summer 2022</span>
+          <span class="label">Goldman Sachs Intern</span>
+          <div class="tooltip"><strong>Summer 2022</strong><br>Software engineering intern in consumer credit risk at <br>Goldman Sachs</div>
+        </li>
+        <li>
+          <span class="dot"></span>
+          <span class="date">2022 - 2023</span>
+          <span class="label">E2E Intern</span>
+          <div class="tooltip"><strong>Fall 2022 - Spring 2023</strong><br>Data scientist intern at <br>Eye to Eye</div>
+        </li>
+        <li>
+          <span class="dot"></span>
+          <span class="date">2023 - Present</span>
+          <span class="label">E2E Lead SWE</span>
+          <div class="tooltip"><strong>2023 - Present</strong><br>Lead software engineer at <br>Eye to Eye</div>
+        </li>
+      </ul>
+    </section>
   </main>
 
+  <footer>
+    © 2025 Austin Stephen
+  </footer>
 </body>
 </html>
